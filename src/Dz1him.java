@@ -1,4 +1,4 @@
-public class Him {
+public class Dz1him {
     public static void main(String[] args) {
         System.out.println("Решение линейного уравнения a * x + b = 0");
         double a = 16;

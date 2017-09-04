@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
-public class Himmm2 {
+public class Dz1himmm {
     public static void main(String[] args) {
         System.out.println("Сейчас будет произведено решение вадратного уравнения a * x * x + b * x + c = 0");
         System.out.println("Необходимо ввести значения a, b и c");
         double a , b , c , D , x , x1 , x2 ;
         Scanner in = new Scanner(System.in);
         System.out.println("ведите целое значение а");
-        a = in.nextDouble();
+        a = in.nextInt();
         System.out.println("ведите целое значение b");
-        b = in.nextDouble();
+        b = in.nextInt();
         System.out.println("ведите целое значение c");
-        c = in.nextDouble();
+        c = in.nextInt();
         D = b * b - 4 * a * c;
         if (D > 0) {
             x1 = (-b - Math.sqrt(D)) / (2 * a);

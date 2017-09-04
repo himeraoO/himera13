@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Himm {
+public class Dz1himm {
     public static void main(String[] args) {
         System.out.println("Сейчас будет произведено решение линейного уравнения a * x + b = 0");
         System.out.println("Необходимо ввести значения a и b");
