@@ -3,8 +3,10 @@ import java.util.Scanner;
 public class Dz2Prostyechisla {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        System.out.println("Программа поиска простых чисел");
+        System.out.println("Используется метод перебора");
         System.out.println("Ведите любое целое число, которое будет последним числом из диапазона, для поиска простых чисел");
-        while (!in.hasNextInt()) {
+               while (!in.hasNextInt()) {
             System.out.println("Error Введите целое число");
             in.next();
         }
