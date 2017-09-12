@@ -1,3 +1,5 @@
+package newpaket2;
+
 import java.util.Date;
 public class Blog {
     public static void main(String[] args) {

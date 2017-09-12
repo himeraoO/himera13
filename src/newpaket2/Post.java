@@ -1,3 +1,5 @@
+package newpaket2;
+
 import java.util.Date;
 public class Post {
         private long postId;
