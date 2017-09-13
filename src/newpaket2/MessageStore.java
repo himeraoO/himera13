@@ -1,17 +1,33 @@
 package newpaket2;
 
 public class MessageStore {
-    private Message[] messages = new Message[10];
+    private static Message[] messages;
+    private static int length;
 
-    public Message[] getMessages() {
+    private MessageStore() {}
+
+    public static Message[] getMessages() {
         return messages;
     }
 
-    public void setMessages(Message[] messages) {
-        this.messages = messages;
+    public static void setMessages(Message[] messages) {
+        MessageStore.messages = messages;
     }
 
-    public void add() {
-        messages[0] = new Message();
+    public static int getLength() {
+        return length;
+    }
+
+    public static void setLength(int length) {
+        MessageStore.length = length;
+    }
+
+    static {
+
+        messages = new Message[10];
+    }
+
+    public static void add(Message message) {
+        messages[length++] = message;
     }
 }

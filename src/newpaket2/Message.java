@@ -54,5 +54,9 @@ public class Message {
         MessageStore3 pos = new MessageStore3();
         pos.add(new Message());
 //будет вызывать метод add у класса MessageStore.
+//        MessageStore poss = new MessageStore();
+//        poss.add(new Message());
+        MessageStore2 poss = new MessageStore2();
+        poss.add(new Message());
     }
 }

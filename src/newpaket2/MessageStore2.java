@@ -20,13 +20,15 @@ public class MessageStore2 {
         this.messages = messages;
     }
 
-    public MessageStore2(int max) {
-        Message[] getMessages = new Message[max];
-        n = 0;
+    public MessageStore2() {
+    }
+
+    public MessageStore2(int n, Message[] messages) {
+        this.n = n;
+        this.messages = messages;
     }
 
     public void add(Message value) {
-        messages[n] = value;
-        n++;
+        messages[n++] = value;
     }
 }
