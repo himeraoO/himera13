@@ -3,19 +3,11 @@ package newpaket2.Dz5;
 import java.util.Date;
 
 public class User {
-    private int userId;
+
     private String login;
     private String password;
-    private String email;
-    private Date registrationDate;
 
-    public int getUserId() {
-        return userId;
-    }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
 
     public String getLogin() {
         return login;
@@ -33,20 +25,21 @@ public class User {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        return (login != null ? login.equals(user.login) : user.login == null) && (password != null ? password.equals(user.password) : user.password == null);
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Date getRegistrationDate() {
-        return registrationDate;
-    }
-
-    public void setRegistrationDate(Date registrationDate) {
-        this.registrationDate = registrationDate;
+    @Override
+    public int hashCode() {
+        int result = login != null ? login.hashCode() : 0;
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        return result;
     }
 
     public User(String login, String password) {
@@ -54,11 +47,4 @@ public class User {
         this.password = password;
     }
 
-    public User(int userId, String login, String password, String email, Date registrationDate) {
-        this.userId = userId;
-        this.login = login;
-        this.password = password;
-        this.email = email;
-        this.registrationDate = registrationDate;
-    }
 }

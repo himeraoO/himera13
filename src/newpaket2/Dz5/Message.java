@@ -11,12 +11,11 @@ public abstract class Message {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Message)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
 
         Message message = (Message) o;
 
-        if (author != null ? !author.equals(message.author) : message.author != null) return false;
-        return date != null ? date.equals(message.date) : message.date == null;
+        return (author != null ? author.equals(message.author) : message.author == null) && (date != null ? date.equals(message.date) : message.date == null);
     }
 
     @Override

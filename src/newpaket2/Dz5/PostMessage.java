@@ -15,16 +15,19 @@ public class PostMessage extends Message {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof PostMessage)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
 
         PostMessage that = (PostMessage) o;
 
-        return getPost() != null ? getPost().equals(that.getPost()) : that.getPost() == null;
+        return post != null ? post.equals(that.post) : that.post == null;
     }
 
     @Override
     public int hashCode() {
-        return getPost() != null ? getPost().hashCode() : 0;
+        int result = super.hashCode();
+        result = 31 * result + (post != null ? post.hashCode() : 0);
+        return result;
     }
 
     @Override
