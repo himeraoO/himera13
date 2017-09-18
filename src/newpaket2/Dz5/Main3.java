@@ -27,32 +27,34 @@ public class Main3 {
         int m;
         Scanner tr = new Scanner(System.in);
 
-        while (!tr.hasNextInt()) {
-            System.out.println("Error Введите число от 1 до 4");
-            tr.next();
-
+        while (tr.hasNextInt()) {
             m = tr.nextInt();
-            if (m < 1) {
-                System.out.println("Error Введите число от 1 до 4");
-                tr.next();
-            } else if (m > 4) {
-                System.out.println("Error Введите число от 1 до 4");
-                tr.next();
+            if (m == 1) {
+                System.out.println("Раздел в разработке");
+                break;
+            } else if (m == 2) {
+                System.out.println("Раздел в разработке");
+                break;
+            } else if (m == 3) {
+                System.out.println("Раздел в разработке");
+                break;
+            } else if (m == 4){
+                System.out.println("Завершение программы");
+                break;
             }
         }
-        m = tr.nextInt();
-        if (m == 1) {
-            System.out.println("Раздел в разработке");
-        } else if (m == 2) {
-            System.out.println("Раздел в разработке");
-        } else if (m == 3) {
-            System.out.println("Раздел в разработке");
-        } else {
-            System.out.println("Завершение программы");
-        }
-
+        System.out.println("Error Введите число от 1 до 4");
+        tr.next();
         System.out.println("Программа завершила работу");
     }
 }
 
-
+//
+//if (m < 1) {
+//        System.out.println("Error Введите число от 1 до 4");
+//        tr.next();
+//        } else if (m > 4) {
+//        System.out.println("Error Введите число от 1 до 4");
+//        tr.next();
+//        }
+//        m = tr.nextInt();
