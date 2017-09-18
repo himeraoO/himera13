@@ -1,27 +1,29 @@
 package newpaket2.Dz5;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class UserStorage2 {
- //   User[] user;
-    ArrayList<User> user = new ArrayList<>();
+    private static ArrayList<User> users = new ArrayList<>();
+
+    static {
+        users.add(new User("l1", "p1"));
+        users.add(new User("l2", "p2"));
+        users.add(new User("l3", "p3"));
+        users.add(new User("l4", "p4"));
+        users.add(new User("l5", "p5"));
+        users.add(new User("l6", "p6"));
+        users.add(new User("l7", "p7"));
+        users.add(new User("l8", "p8"));
+        users.add(new User("l9", "p9"));
+        users.add(new User("l10", "p10"));
+    }
 
 
-
-
-
-
-    public void authenticate(User user){
-//        User newUser = new User(newUser.getLogin(), newUser.getPassword());
-//        while (newUser.getLogin().equals(user.getLogin()) && newUser.getPassword().equals(user.getPassword())){
-//            System.out.println("Authentication false");
-//        }
-//        System.out.println("Authentication true");
-//
-//
-
+    public boolean authenticate(User user) {
+        if (users.contains(new User(user.getLogin(), user.getPassword()))) {
+            return true;
+        }
+        return false;
+    }
 }
 
-
-}
