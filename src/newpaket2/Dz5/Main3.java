@@ -41,7 +41,7 @@ public class Main3 {
             } else if (m == 4){
                 System.out.println("Завершение программы");
                 break;
-            }
+            }System.out.println("Программа завершила работу");
         }
         System.out.println("Error Введите число от 1 до 4");
         tr.next();
