@@ -36,6 +36,7 @@ public class OneWayList<T> implements CustomList<T> {
 
 
     private Element head;
+    private int size;
     private Element tail;
 
     private class Element {
@@ -66,23 +67,31 @@ public class OneWayList<T> implements CustomList<T> {
             // ссылает на новый элемент
             tail = el;
         }
+        size++;
     }
 
     @Override
     public void delete(int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Index be must positive" + "and less than size");
+        }
+        if (index == 0) {
+            head = head.next;
+        } else {
+            int currentIndex = 0; //текущий индекс
+            Element current = head;
+            Element prev = null;
 
+            while (currentIndex != index) {
+                prev = current;
+                current = current.next;
+                currentIndex++;
+            }
 
-//            if (head == null) {
-//                tail = tail.next;
-//            } else {
-//                index++;
-//            }
-//
-//            if (tail == null) {
-//                Element = null;
-//            } else {
-//                head = tail;
-//            }
+            prev.next = current.next;
+         //   current = null; //не обязательно
+        }
+        size--;
 
 
 

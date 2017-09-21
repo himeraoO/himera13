@@ -24,37 +24,63 @@ public class Main3 {
         } else
             System.out.println("Добро пожаловать");
         System.out.println("1. Показать все мои посты\n" + "2. Написать сообщение пользователю\n" + "3. Оставить комментарий к посту\n" + "4. Выход\n");
+
+       ////////////////////////////////////////////////
+
+        for(;;){
+            Scanner tr = new Scanner(System.in);
+            while(!tr.hasNextInt()){
+                tr.next();
+            }
+            int m = tr.nextInt();
+            if((m == 1) || (m == 2) || (m == 3)){
+                System.out.println("Razdel nahoditsya v razrabotke");
+                continue;
+            }
+            if(m == 4){
+                System.out.println("Vi vibrali zavershenie raboti programmi.");
+                System.out.println("Programma okonchena. Spasibo za ispolzovanie etoi programmi");
+                return;
+            }
+
+                tr.next();
+
+        }
+
+
+
+        /////////////////////////////////////////////////
+
+       /*
         int m;
         Scanner tr = new Scanner(System.in);
-
+        m = tr.nextInt();
         while (tr.hasNextInt()) {
-            m = tr.nextInt();
-            if (m == 1) {
-                System.out.println("Раздел в разработке");
-                break;
-            } else if (m == 2) {
-                System.out.println("Раздел в разработке");
-                break;
-            } else if (m == 3) {
-                System.out.println("Раздел в разработке");
-                break;
-            } else if (m == 4){
-                System.out.println("Завершение программы");
-                break;
-            }System.out.println("Программа завершила работу");
-        }
-        System.out.println("Error Введите число от 1 до 4");
-        tr.next();
-        System.out.println("Программа завершила работу");
-    }
-}
 
-//
-//if (m < 1) {
-//        System.out.println("Error Введите число от 1 до 4");
-//        tr.next();
-//        } else if (m > 4) {
-//        System.out.println("Error Введите число от 1 до 4");
-//        tr.next();
-//        }
-//        m = tr.nextInt();
+            if ((m != 1) && (m != 2) && (m != 3) && (m != 4)) {
+                System.out.println("Error Введите число от 1 до 4");
+                tr.next();
+            }
+            else {
+                break;
+            }
+        }
+
+        if (m == 1) {
+            System.out.println("Раздел в разработке");
+        return;
+        } else if (m == 2) {
+            System.out.println("Раздел в разработке");
+        return;
+        } else if (m == 3) {
+            System.out.println("Раздел в разработке");
+        return;
+        } else if (m == 4) {
+            System.out.println("Завершение программы");
+        return;
+        }
+        System.out.println("Программа завершила работу");
+*/
+    }
+
+}
