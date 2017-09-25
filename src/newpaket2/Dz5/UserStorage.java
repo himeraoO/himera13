@@ -50,8 +50,8 @@ public class UserStorage {
     private static User[] users;
     static {
         users = new User[]{
-                new User("login1", "password1"),
-                new User("login2", "password2"),
+                new User("l1", "p1"),
+                new User("l2", "p2"),
                 new User("login3", "password3"),
                 new User("login4", "password4"),
                 new User("login5", "password5"),
