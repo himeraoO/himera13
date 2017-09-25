@@ -27,7 +27,7 @@ public class Main3 {
         } else
             System.out.println("Добро пожаловать пользователь: " + login + "!");
         System.out.println("1. Показать все мои посты\n" + "2. Написать сообщение пользователю\n" + "3. Оставить комментарий к посту\n" + "4. Выход\n");
-
+        System.out.println("Выберите раздел меню введя соответствующую цифру.");
         Scanner tr = new Scanner(System.in);
 
         for (; ; ) {

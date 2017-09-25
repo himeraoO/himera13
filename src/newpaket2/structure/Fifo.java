@@ -18,9 +18,11 @@ public class Fifo {
     }
 
     public Object dequeue() {
+
         if (size == 0) {
-            return null;
+            throw new EmptyQueueException("Empty queue");
         }
+
         Object obj = head.getObject();
         head = head.getNext();
         if (head == null) {

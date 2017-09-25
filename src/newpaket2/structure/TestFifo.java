@@ -33,6 +33,5 @@ public class TestFifo {
             System.out.println(s);
             System.out.println("Размер очереди:" + queue.size());
         }
-
     }
 }
